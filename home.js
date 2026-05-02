@@ -157,3 +157,11 @@ function openModal(issue) {
     modal.showModal();
 }
 allissues();
+document.getElementById("search-btn").addEventListener("click", () => {
+    const inputText = document.getElementById("input-text").value;
+    const filteredIssues = allIssuesData.filter(issue =>
+        issue.title.toLowerCase().includes(inputText.toLowerCase()) ||
+        issue.description.toLowerCase().includes(inputText.toLowerCase())
+    );
+    renderIssues(filteredIssues);
+});
