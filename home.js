@@ -36,6 +36,7 @@ async function allissues() {
     const data = await response.json();
 
     issuesContainer.innerHTML = "";
+    document.getElementById("issue-count").textContent = `${data.data.length} Issues`;
 
     data.data.forEach(issue => {
         const issueElement = document.createElement("div");

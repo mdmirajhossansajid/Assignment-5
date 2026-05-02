@@ -45,7 +45,38 @@
             <button id="open-btn" class="btn btn-ghost font-semibold">Open</button>
             <button id="closed-btn" class="btn btn-ghost  font-semibold">Closed</button>
         </div>
+        <div class="bg-base-100 p-5 rounded-lg shadow-sm flex items-center justify-between mb-6">
         
+            <!-- Left Side -->
+            <div class="flex items-center gap-3">
+                
+                <div class="w-10 h-10 flex items-center justify-center bg-purple-100 text-purple-600 rounded-full">
+                   <img src="assets/Aperture.png" alt="">
+                </div>
+        
+                <!-- Text -->
+                <div>
+                    <h2 id="issue-count" class="font-semibold text-lg">0 Issues</h2>
+                    <p class="text-sm text-gray-500">Track and manage your project issues</p>
+                </div>
+            </div>
+        
+            <!-- Right Side -->
+            <div class="flex items-center gap-4 text-sm">
+        
+                <div class="flex items-center gap-1">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <span>Open</span>
+                </div>
+        
+                <div class="flex items-center gap-1">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <span>Closed</span>
+                </div>
+        
+            </div>
+        
+        </div>
             <div id="issues-container" class="grid gap-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch">
                 <!-- Issues will be dynamically added here -->
                 
