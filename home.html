@@ -85,6 +85,59 @@
 
             </div>
     </section>
+    <dialog id="issueModal" class="modal">
+        <div class="modal-box max-w-2xl">
+    
+            <div class="p-5 rounded-lg space-y-4">
+    
+                <!-- Title -->
+                <h2 id="modal-title" class="text-xl font-bold">
+                    Fix broken image uploads
+                </h2>
+    
+                <!-- Status + Info -->
+                <div class="flex items-center gap-2 text-sm text-gray-500">
+                    <span id="modal-status" class="bg-green-500 text-white px-2 py-1 rounded-full text-xs">Opened</span>
+                    <span>• Opened by <span id="modal-author">Fahim Ahmed</span></span>
+                    <span>• <span id="modal-date">22/02/2026</span></span>
+                </div>
+    
+                <!-- Labels -->
+                <div id="modal-labels" class="flex gap-2 flex-wrap">
+                    <!-- dynamic labels -->
+                </div>
+    
+                <!-- Description -->
+                <p id="modal-description" class="text-gray-600">
+                    The navigation menu doesn't collapse properly...
+                </p>
+    
+                <!-- Bottom -->
+                <div class="flex justify-between items-center mt-6">
+    
+                    <div>
+                        <p class="text-sm text-gray-500">Assignee:</p>
+                        <p id="modal-assignee" class="font-semibold">Fahim Ahmed</p>
+                    </div>
+    
+                    <div>
+                        <p class="text-sm text-gray-500">Priority:</p>
+                        <span id="modal-priority" class="bg-red-500 text-white px-3 py-1 rounded-xl text-sm">HIGH</span>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+            <!-- Close Button -->
+            <div class="modal-action">
+                <form method="dialog">
+                    <button class="btn btn-primary">Close</button>
+                </form>
+            </div>
+    
+        </div>
+    </dialog>
     <script src="home.js"></script>
 </body>
 </html>

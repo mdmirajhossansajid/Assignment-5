@@ -99,6 +99,7 @@ function renderIssues(issues) {
 
         </div>
         `;
+        issueElement.addEventListener("click", () => openModal(issue));
 
         issuesContainer.appendChild(issueElement);
     });
@@ -127,4 +128,32 @@ buttons.forEach(btn => {
         btn.classList.add("btn-primary");
     });
 });
+
+function openModal(issue) {
+    const modal = document.getElementById("issueModal");
+
+    document.getElementById("modal-title").innerText = issue.title;
+    document.getElementById("modal-author").innerText = issue.author;
+    document.getElementById("modal-date").innerText = new Date(issue.createdAt).toLocaleDateString();
+    document.getElementById("modal-description").innerText = issue.description;
+    document.getElementById("modal-assignee").innerText = issue.assignee || "Unassigned";
+
+    // Status
+    document.getElementById("modal-status").innerText = issue.status;
+
+    // Priority
+    document.getElementById("modal-priority").innerText = issue.priority;
+
+    // Labels
+    const labelsContainer = document.getElementById("modal-labels");
+    labelsContainer.innerHTML = "";
+    issue.labels.forEach(label => {
+        labelsContainer.innerHTML += `
+        <span class="badge bg-yellow-200 text-yellow-700 px-3 py-1 rounded-xl">
+            ${label}
+        </span>`;
+    });
+
+    modal.showModal();
+}
 allissues();
