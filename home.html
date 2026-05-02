@@ -19,7 +19,7 @@
     <!-- css -->
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body class="geist">
     <section>
         <div class="navbar bg-base-100 shadow-sm">
             <div class="flex-1">
@@ -39,5 +39,20 @@
             </div>
         </div>
     </section>
+    <section class="p-8 mx-auto w-10/12 ">
+        <div class="flex gap-3  mb-6 bg-base-100 mt-6 rounded-lg shadow-sm p-3">
+            <button id="all-btn" class="btn btn-ghost  font-semibold">All</button>
+            <button id="open-btn" class="btn btn-ghost font-semibold">Open</button>
+            <button id="closed-btn" class="btn btn-ghost  font-semibold">Closed</button>
+        </div>
+            <div id="issues-container" class="grid gap-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-stretch">
+                <!-- Issues will be dynamically added here -->
+                
+
+
+
+            </div>
+    </section>
+    <script src="home.js"></script>
 </body>
 </html>
