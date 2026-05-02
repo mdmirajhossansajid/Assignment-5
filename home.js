@@ -24,7 +24,13 @@ const getStatusIcon = (status) => {
         </div>`;
     }
 };
-
+const getBorderClass = (status) => {
+    if (status.toLowerCase() === "open") {
+        return "border-t-4 border-green-500";
+    } else {
+        return "border-t-4 border-purple-500";
+    }
+};
 async function allissues() {
     const response = await fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues");
     const data = await response.json();
@@ -37,7 +43,7 @@ async function allissues() {
         issueElement.className = "h-full";
 
         issueElement.innerHTML = `
-        <div class="bg-base-100 p-4 rounded-lg shadow-sm space-y-2 h-full flex flex-col">
+        <div class="bg-base-100 p-4 rounded-lg shadow-sm ${getBorderClass(issue.status)} space-y-2 h-full flex flex-col">
 
             <div class="flex justify-between items-center">
                 ${getStatusIcon(issue.status)}
